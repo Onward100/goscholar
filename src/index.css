@@ -396,9 +396,6 @@ h1 {
   margin-bottom: 20px;
   transition: all 0.3s ease;
 }
-.service:hover {
-  background-color: #dedefd;
-}
 .readMore {
   text-decoration: none;
   color: #5c59f3;
