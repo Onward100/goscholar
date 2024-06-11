@@ -21,7 +21,7 @@ html {
 .error h1 {
   font-size: 50px;
   font-weight: bold;
-  color: #5c59f3;
+  color: #0F7681;
 }
 /* Header styling */
 .header {
@@ -39,31 +39,13 @@ html {
 .header-content {
   padding: 20px;
 }
-.header-contact {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background-color: #5c59f3;
-  padding: 20px 20px 0;
-  color: white;
-}
-.header-contact p {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.header-contact .email {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  text-shadow: 2px;
-}
 .logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #5c59f3;
+  color: #0F7681;
   font-weight: bold;
+  align-items: center;
 }
 .logo .menu {
   font-size: 24px;
@@ -91,7 +73,7 @@ html {
   transition: 0.3s ease;
 }
 .nav-links li:hover {
-  color: #5c59f3;
+  color: #0F7681;
   text-decoration: underline;
 }
 .nav-links .link {
@@ -154,7 +136,7 @@ h1 {
   text-decoration: none;
 }
 .button {
-  background-color: #5c59f3;
+  background-color: #0F7681;
   font-weight: bold;
   color: white;
   border: none;
@@ -172,8 +154,12 @@ h1 {
 .rating--content {
   margin: 30px 0 60px;
   text-align: center;
-  border: 2px solid #5c59f3;
-  padding: 20px;
+  background-color: #2ba0ad;
+  padding: 50px;
+}
+.rating--content h3{
+  color: #26919d;
+  font-weight: bold;
 }
 
 /* Why choose us */
@@ -193,7 +179,7 @@ h1 {
   margin-bottom: 30px;
 }
 .info-icon {
-  color: #5c59f3;
+  color: #0F7681;
 }
 .bulb-icon {
   background-color: #dedefd;
@@ -242,7 +228,7 @@ h1 {
   display: none;
 }
 .contact2-form {
-  background-color: #dedefd;
+  background-color: #3bc3d2;
 }
 .contact2-form-content {
   width: 80%;
@@ -252,7 +238,7 @@ h1 {
 
 .contact2 h2 {
   text-align: center;
-  color: #5c59f3;
+  color: #0F7681;
   padding: 30px 0 0;
 }
 .contact2-input {
@@ -264,7 +250,7 @@ h1 {
   outline: none;
 }
 .contact2-input:focus {
-  border: 2px solid #5c59f3;
+  border: 2px solid #0F7681;
 }
 
 .contact2-form-content textarea {
@@ -277,7 +263,7 @@ h1 {
   border: none;
 }
 .contact2-form-content textarea:focus {
-  border: 2px solid #5c59f3;
+  border: 2px solid #0F7681;
 }
 .contact2-btn {
   margin: 20px auto;
@@ -308,7 +294,7 @@ h1 {
   left: 0;
 }
 .formPage {
-  background-color: rgba(0, 0, 255, 0.4);
+  background-color: #155960;
   position: relative;
   top: 145px;
 }
@@ -333,7 +319,7 @@ h1 {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .form--data .input:hover {
-  border-bottom: 2px solid #5c59f3;
+  border-bottom: 2px solid #0F7681;
 }
 .form--data .other {
   background-color: white;
@@ -346,7 +332,7 @@ h1 {
   transition: 0.3s ease;
 }
 .form--data .other:hover {
-  border-bottom: 2px solid #5c59f3;
+  border-bottom: 2px solid #0F7681;
 }
 .form--page span {
   color: #c12f32;
@@ -361,7 +347,7 @@ h1 {
   width: 30%;
   text-align: center;
   font-weight: bold;
-  color: #5c59f3;
+  color: #0F7681;
   font-size: 20px;
   display: block;
   margin: 0 auto;
@@ -376,12 +362,12 @@ h1 {
   margin-top: 50px;
 }
 .intro--header {
-  color: #5c59f3;
+  color: #0F7681;
   text-align: center;
 }
 .services h2 {
   margin-bottom: 20px;
-  color: #5c59f3;
+  color: #0F7681;
 }
 .services-content {
   padding: 20px;
@@ -398,12 +384,12 @@ h1 {
 }
 .readMore {
   text-decoration: none;
-  color: #5c59f3;
+  color: #0F7681;
 }
 
 .icon {
   font-size: 50px;
-  background-color: #5c59f3;
+  background-color: #0F7681;
   color: white;
   border-radius: 50%;
   padding: 12px;
@@ -433,14 +419,14 @@ p button {
   margin-bottom: 20px;
 }
 .about--content h1 {
-  color: #5c59f3;
+  color: #0F7681;
 }
 .about--content hr {
-  border-bottom: 2px dashed #5c59f3;
+  border-bottom: 2px dashed #0F7681;
 }
 .mail {
   text-decoration: none;
-  color: #5c59f3;
+  color: #0F7681;
 }
 /* News Feed section */
 .blog--section {
@@ -474,7 +460,7 @@ p button {
 }
 .show-more-link {
   transition: 0.3s ease;
-  border: 2px solid #5c59f3;
+  border: 2px solid #0F7681;
   padding: 8px 30px;
   border-radius: 5px;
   text-decoration: none;
@@ -484,7 +470,7 @@ p button {
 }
 .show-more-link:hover {
   color: white;
-  background-color: #5c59f3;
+  background-color: #0F7681;
 }
 
 /* Blog Page */
@@ -495,7 +481,7 @@ p button {
 .blog--page h1 {
   padding-top: 30px;
   padding-left: 30px;
-  color: #5c59f3;
+  color: #0F7681;
 }
 .blog--page img {
   max-width: 100%;
@@ -517,7 +503,7 @@ h4 {
   margin: 30px 0;
 }
 .blog--links {
-  background-color: #5c59f3;
+  background-color: #0F7681;
   color: white;
   border: none;
   text-align: center;
@@ -559,14 +545,14 @@ h4 {
 .services-bg img {
   width: 100%;
   object-fit: cover;
-  height: 70vh;
+  height: 90vh;
 }
 .service--content {
   width: 90%;
   margin: auto;
 }
 .service-text-content h2 {
-  color: #5c59f3;
+  color: #0F7681;
 }
 .services--content h2 {
   margin: 30px 0;
@@ -582,7 +568,7 @@ h4 {
   margin: 0 auto 50px;
   width: 40%;
   display: block;
-  background-color: #5c59f3;
+  background-color: #0F7681;
   color: white;
   border: none;
   border-radius: 5px;
@@ -598,7 +584,7 @@ h4 {
 .contact-content {
   width: 90%;
   margin: auto;
-  background-color: #9999ff;
+  background-color: #0F7681;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -631,14 +617,14 @@ h4 {
   margin-bottom: 20px;
 }
 .contact-phone-details h5 {
-  color: #5c59f3;
+  color: #0F7681;
 }
 .phone-content {
   display: flex;
   gap: 10px;
 }
 .phone-content .contact-icon {
-  color: #5c59f3;
+  color: #0F7681;
   font-size: 20px;
 }
 .contact-email {
@@ -657,7 +643,7 @@ h4 {
   border-right: 0;
   border-left: 0;
   border-radius: 5px;
-  border-bottom: 2px solid #5c59f3;
+  border-bottom: 2px solid #0F7681;
 }
 .contact .send-btn {
   width: 50%;
@@ -670,7 +656,7 @@ h4 {
 }
 /* Footer styling */
 .footer {
-  background-color: #5c59f3;
+  background-color: #0F7681;
   color: white;
   padding: 20px;
   margin-top: 30px;
@@ -742,7 +728,7 @@ h4 {
   }
   .nav-links li {
     padding: 0 10px;
-    color: #5c59f3 !important;
+    color: #0F7681 !important;
   }
   .logo .menu {
     display: none;

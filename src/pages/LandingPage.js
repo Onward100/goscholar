@@ -319,31 +319,7 @@ export default function HomePage() {
       </div>
 
       <br />
-      <section className="blog">
-        <div className="blog--content">
-          <h2 className="intro--header">Our news feed</h2>
-          <div className="blog--section">
-            <div className="blog--cards">
-              {posts.slice(0, 3).map((post) => (
-                <article key={post._id}>
-                  <img src={post.mainImage.asset.url} alt={post.title} />
-                  <h4>{post.title}</h4>
-                  <div className="blog-link">
-                    <Link className="blog--links" to="/blog">
-                      Read Full Article
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="show-more-blog">
-              <Link className="show-more-link" to="/blog">
-                See More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+    
       
       <div className="client-feedback">
         <h2 className="intro--header">Our Clients Feedback</h2>
@@ -416,6 +392,7 @@ export default function HomePage() {
           <img src={ContactImg} />
         </div>
         <div className="contact2-form">
+          <h2>Book us now</h2>
           <form onSubmit={handleSubmit} className="contact2-form-content">
             <label htmlFor="name">Name</label>
             <br />
@@ -464,7 +441,31 @@ export default function HomePage() {
         </div>
       </div>
 
-      
+      <section className="blog">
+        <div className="blog--content">
+          <h2 className="intro--header">Our Latest News Feed</h2>
+          <div className="blog--section">
+            <div className="blog--cards">
+              {posts.slice(0, 3).map((post) => (
+                <article key={post._id}>
+                  <img src={post.mainImage.asset.url} alt={post.title} />
+                  <h4>{post.title}</h4>
+                  <div className="blog-link">
+                    <Link className="blog--links" to="/blog">
+                      Read Full Article
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="show-more-blog">
+              <Link className="show-more-link" to="/blog">
+                See More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );

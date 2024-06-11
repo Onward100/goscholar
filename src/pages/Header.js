@@ -10,12 +10,6 @@ export default function Header() {
   return (
     <div className="header">
       <div className="fixed-header">
-      <div className="header-contact">
-        <Link to="mailto: worukaonward@gmail.com" className="email">
-          <p>{<FaEnvelope />} info@gmail.com</p>
-        </Link>
-        <p>{<FaPhoneAlt />} +234 333- 333- 4444</p>
-      </div>
       <div className="header-content">
         <div className="logo">
           <h2>GoScholar</h2>
