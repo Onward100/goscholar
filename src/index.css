@@ -467,6 +467,7 @@ p button {
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
+  color: #0F7681;
   background-color: transparent;
   box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.3);
 }
