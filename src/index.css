@@ -37,7 +37,7 @@ html {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .header-content {
-  padding: 20px;
+  padding: 30px 20px;
 }
 .logo {
   display: flex;
