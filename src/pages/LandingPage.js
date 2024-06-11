@@ -446,7 +446,7 @@ export default function HomePage() {
           <h2 className="intro--header">Our Latest News Feed</h2>
           <div className="blog--section">
             <div className="blog--cards">
-              {posts.slice(0, 3).map((post) => (
+              {posts && posts.slice(0, 3).map((post) => (
                 <article key={post._id}>
                   <img src={post.mainImage.asset.url} alt={post.title} />
                   <h4>{post.title}</h4>

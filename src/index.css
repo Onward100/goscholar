@@ -83,7 +83,7 @@ html {
 /* LandingPage styling */
 .landingpage-content {
   position: relative;
-  top: 100px;
+  top: 80px;
 }
 .image {
   width: 100%;
@@ -158,7 +158,7 @@ h1 {
   padding: 50px;
 }
 .rating--content h3{
-  color: #26919d;
+  color: #0a3c42;
   font-weight: bold;
 }
 
