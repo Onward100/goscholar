@@ -14,6 +14,7 @@ import Footer from "./Footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Rating from "../pages/Rating";
+import services from "./servicesData";
 
 export default function HomePage() {
   useEffect(() => {
@@ -130,152 +131,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="services">
-        <h2 className="services-header intro--header">Our Services</h2>
-        <div
-          className="services-content"
-          data-aos="zoom-in-up"
-          data-aos-duration="1500"
-        >
-          <div className="service">
-            <div className="services-icon">
-              <FaGraduationCap className="icon" />
+      <div className="services-section">
+        <h1 className="intro--header">Our Services</h1>
+        <div className="services-section-content">
+          {services.map((service) => (
+            <div key={service.id} className="services">
+              <img src={service.image} alt={service.name} />
+              <h1>{service.name}</h1>
+              <Link to={`/services/${service.id}`} className="services--btn">
+                Get Started
+              </Link>
             </div>
-            <h2>Academic writing</h2>
-            <p>
-              Unlock your academic potential, with our expert writing services
-            </p>
-            <Link to="/services" className="readMore">
-              <p>
-                Learn More
-                <span>
-                  <FaArrowRight />
-                </span>
-              </p>
-            </Link>
-          </div>
-          <div className="service">
-            <div className="services-icon">
-              <FaGraduationCap className="icon" />
-            </div>
-            <h2>SOP & Research Proposals</h2>
-            <p>
-              Craft your path to success with our tailored SOPs and Research
-              Proposals
-            </p>
-            <Link to="/services" className="readMore">
-              <p>
-                Learn More
-                <span>
-                  <FaArrowRight />
-                </span>
-              </p>
-            </Link>
-          </div>
-          <div className="service">
-            <div className="services-icon">
-              <FaAccessibleIcon className="icon" />
-            </div>
-            <h2>Proofreading</h2>
-            <p>Enhance your message, with our expert proofreading services</p>
-            <Link to="/services" className="readMore">
-              <p>
-                Learn More
-                <span>
-                  <FaArrowRight />
-                </span>
-              </p>
-            </Link>
-          </div>
-          <div className="service">
-            <div className="services-icon">
-              <FaGraduationCap className="icon" />
-            </div>
-            <h2>Copywriting</h2>
-            <p>
-              Unlock your academic potential, with our expert writing services
-            </p>
-            <Link to="/services" className="readMore">
-              <p>
-                Learn More
-                <span>
-                  <FaArrowRight />
-                </span>
-              </p>
-            </Link>
-          </div>
-          <div className="service">
-            <div className="services-icon">
-              <FaGraduationCap className="icon" />
-            </div>
-            <h2>Business proposal writing</h2>
-            <p>
-              Your success starts here with our tailored business proposals that
-              get results
-            </p>
-            <Link to="/services" className="readMore">
-              <p>
-                Learn More
-                <span>
-                  <FaArrowRight />
-                </span>
-              </p>
-            </Link>
-          </div>
-          <div className="service">
-            <div className="services-icon">
-              <FaGraduationCap className="icon" />
-            </div>
-            <h2>Advert and promotions</h2>
-            <p>
-              Boost your brand visibility with strategic advertisements that
-              resonate
-            </p>
-            <Link to="/services" className="readMore">
-              <p>
-                Learn More
-                <span>
-                  <FaArrowRight />
-                </span>
-              </p>
-            </Link>
-          </div>
-          <div className="service">
-            <div className="services-icon">
-              <FaGraduationCap className="icon" />
-            </div>
-            <h2>Voice Over</h2>
-            <p>
-              Unlock your academic potential, with our expert writing services
-            </p>
-            <Link to="/services" className="readMore">
-              <p>
-                Learn More
-                <span>
-                  <FaArrowRight />
-                </span>
-              </p>
-            </Link>
-          </div>
-          <div className="service">
-            <div className="services-icon">
-              <FaGraduationCap className="icon" />
-            </div>
-            <h2>Branding & Design</h2>
-            <p>
-              Unlock your academic potential, with our expert writing services
-            </p>
-            <Link to="/services" className="readMore">
-              <p>
-                Learn More
-                <span>
-                  <FaArrowRight />
-                </span>
-              </p>
-            </Link>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
 
       <Rating />
 
@@ -319,8 +188,7 @@ export default function HomePage() {
       </div>
 
       <br />
-    
-      
+
       <div className="client-feedback">
         <h2 className="intro--header">Our Clients Feedback</h2>
         <div className="client-feedback-cards">
@@ -386,7 +254,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      
+
       <div className="contact2">
         <div className="contact2-img">
           <img src={ContactImg} />
@@ -446,17 +314,18 @@ export default function HomePage() {
           <h2 className="intro--header">Our Latest News Feed</h2>
           <div className="blog--section">
             <div className="blog--cards">
-              {posts && posts.slice(0, 3).map((post) => (
-                <article key={post._id}>
-                  <img src={post.mainImage.asset.url} alt={post.title} />
-                  <h4>{post.title}</h4>
-                  <div className="blog-link">
-                    <Link className="blog--links" to="/blog">
-                      Read Full Article
-                    </Link>
-                  </div>
-                </article>
-              ))}
+              {posts &&
+                posts.slice(0, 3).map((post) => (
+                  <article key={post._id}>
+                    <img src={post.mainImage.asset.url} alt={post.title} />
+                    <h4>{post.title}</h4>
+                    <div className="blog-link">
+                      <Link className="blog--links" to="/blog">
+                        Read Full Article
+                      </Link>
+                    </div>
+                  </article>
+                ))}
             </div>
             <div className="show-more-blog">
               <Link className="show-more-link" to="/blog">
