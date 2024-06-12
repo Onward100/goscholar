@@ -538,7 +538,6 @@ h4 {
 .service img {
   max-width: 100%;
   border-radius: 8px;
-  height: ;
 }
 .services--page{
   width: 90%;
@@ -550,6 +549,15 @@ h4 {
 .servicesDetails {
   width: 80%;
   margin: auto;
+}
+.servicesDetails{
+  padding: 50px 0;
+}
+.servicesDetails img{
+  height: 550px;
+}
+.servicesDetails h1, p, img, .services--btn{
+  margin-bottom: 20px;
 }
 .services--btn {
   border: none;
@@ -904,5 +912,11 @@ h4 {
   .services-section-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .servicesDetails{
+    padding: 50px 0;
+  }
+  .servicesDetails h1, img{
+    margin-bottom: 20px;
   }
 }
