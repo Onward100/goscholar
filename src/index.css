@@ -10,6 +10,12 @@ html {
 .all--pages {
   margin-top: 80px;
 }
+.about-img img{
+  max-width: 100%;
+}
+.about-img{
+  margin-top: 30px;
+}
 /* Error page */
 .error {
   width: 80%;
@@ -368,10 +374,6 @@ h1 {
   width: 90%;
   margin: auto;
 }
-.services-section-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
 .services {
   border: 1px solid #ccc;
   padding: 20px;
@@ -526,6 +528,13 @@ h4 {
 .service img {
   max-width: 100%;
   border-radius: 8px;
+}
+.services--page{
+  width: 90%;
+  margin: auto;
+}
+.services-page h1{
+  padding: 30px 0 10px;
 }
 .servicesDetails {
   width: 80%;
@@ -880,5 +889,9 @@ h4 {
   }
   .services-page h1{
     padding: 40px 0 0;
+  }
+  .services-section-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

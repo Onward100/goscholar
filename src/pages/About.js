@@ -32,7 +32,7 @@ export default function About() {
               <button className="services--btn">SEND US A MAIL</button>
             </Link>
           </div>
-          <div className="service--img" data-aos="zoom-in" data-aos-duration="1500">
+          <div className="about-img" data-aos="zoom-in" data-aos-duration="1500">
             <img src={serviceImage4} />
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function About() {
               and global communities.
             </p>
           </div>
-          <div className="service--img" data-aos="zoom-in" data-aos-duration="1500">
+          <div className="about-img" data-aos="zoom-in" data-aos-duration="1500">
             <img src={serviceImage7} />
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function About() {
               services.
             </p>
           </div>
-          <div className="service--img" data-aos="zoom-in" data-aos-duration="1500">
+          <div className="about-img" data-aos="zoom-in" data-aos-duration="1500">
             <img src={serviceImage2} />
           </div>
         </div>
