@@ -320,7 +320,7 @@ export default function HomePage() {
                     <img src={post.mainImage.asset.url} alt={post.title} />
                     <h4>{post.title}</h4>
                     <div className="blog-link">
-                      <Link className="blog--links" to="/blog">
+                      <Link className="blog--links" to={`/blog/${post.slug.current}`}>
                         Read Full Article
                       </Link>
                     </div>
