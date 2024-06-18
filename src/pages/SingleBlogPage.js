@@ -48,6 +48,21 @@ export default function SingleBogPage() {
     return <h1>Post not found</h1>;
   }
 
+  const handleShare = (post) => {
+    if (navigator.share) {
+      navigator.share({
+        title: post.title,
+        url: `${window.location.origin}/blog/${post.slug.current}`,
+      })
+      .then(() => {
+        console.log('Thanks for sharing!');
+      })
+      .catch(console.error);
+    } else {
+      alert('Sharing is not supported in your browser. Copy the link manually: ' + `${window.location.origin}/blog/${post.slug.current}`);
+    }
+  };
+
   return (
     <div className="singlePost">
       <section>
@@ -68,6 +83,7 @@ export default function SingleBogPage() {
             Read more article
           </Link>
         </div>
+          <button onClick={() => handleShare(post)} className="share--btn">Share</button>
       </section>
       <Footer />
     </div>

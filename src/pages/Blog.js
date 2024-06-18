@@ -23,14 +23,27 @@ export default function Blog() {
             }
         }
         `
-
-
       )
       .then((data) => {
-        setPosts(data)
+        setPosts(data);
       })
       .catch(console.error);
   }, []);
+
+  const handleShare = (post) => {
+    if (navigator.share) {
+      navigator.share({
+        title: post.title,
+        url: `${window.location.origin}/blog/${post.slug.current}`,
+      })
+      .then(() => {
+        console.log('Thanks for sharing!');
+      })
+      .catch(console.error);
+    } else {
+      alert('Sharing is not supported in your browser. Copy the link manually: ' + `${window.location.origin}/blog/${post.slug.current}`);
+    }
+  };
 
   return (
     <div>
@@ -41,9 +54,12 @@ export default function Blog() {
             <article key={post._id}>
               <img src={post.mainImage.asset.url} alt={post.title} />
               <h4>{post.title}</h4>
-             <div className="blog-link">
-             <Link className="blog--links" to={`/blog/${post.slug.current}`}>Read Full Article</Link>
-             </div>
+              <div className="blog-link">
+                <Link className="blog--links" to={`/blog/${post.slug.current}`}>
+                  Read Full Article
+                </Link>
+              </div>
+              <button onClick={() => handleShare(post)} className="share--btn" >Share</button>
             </article>
           ))}
         </div>

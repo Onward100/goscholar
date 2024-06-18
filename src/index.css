@@ -33,6 +33,21 @@ html {
   text-align: center;
   color: #0f7681;
 }
+.share--btn{
+  background-color: #0f7681;
+  color: white;
+  border: none;
+  text-align: center;
+  padding: 8px 30px;
+  outline: none;
+  box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.share--btn:hover{
+  box-shadow: inset 2px 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 /* Header styling */
 .header {
   box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.3);

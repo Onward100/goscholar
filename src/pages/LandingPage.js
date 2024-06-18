@@ -102,6 +102,21 @@ export default function HomePage() {
     return newErrors;
   };
 
+  const handleShare = (post) => {
+    if (navigator.share) {
+      navigator.share({
+        title: post.title,
+        url: `${window.location.origin}/blog/${post.slug.current}`,
+      })
+      .then(() => {
+        console.log('Thanks for sharing!');
+      })
+      .catch(console.error);
+    } else {
+      alert('Sharing is not supported in your browser. Copy the link manually: ' + `${window.location.origin}/blog/${post.slug.current}`);
+    }
+  };
+
   return (
     <div className="landingpage">
       <section className="landingpage-content">
@@ -324,6 +339,7 @@ export default function HomePage() {
                         Read Full Article
                       </Link>
                     </div>
+                    <button onClick={() => handleShare(post)} className="share--btn">Share</button>
                   </article>
                 ))}
             </div>
