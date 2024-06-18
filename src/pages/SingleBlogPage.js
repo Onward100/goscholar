@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { client } from "../client";
-import BlockContent from "@sanity/block-content-to-react"
+import BlockContent from "@sanity/block-content-to-react";
 import Footer from "./Footer";
 
-export default function SingleBogPage() {
+export default function SingleBlogPage() {
   const [singlePost, setSinglePost] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { slug } = useParams();
@@ -52,14 +52,14 @@ export default function SingleBogPage() {
     if (navigator.share) {
       navigator.share({
         title: post.title,
-        url: `${window.location.origin}/blog/${post.slug.current}`,
+        url: `${window.location.origin}/blog/${slug}`,
       })
-      .then(() => {
-        console.log('Thanks for sharing!');
-      })
-      .catch(console.error);
+        .then(() => {
+          console.log('Thanks for sharing!');
+        })
+        .catch(console.error);
     } else {
-      alert('Sharing is not supported in your browser. Copy the link manually: ' + `${window.location.origin}/blog/${post.slug.current}`);
+      alert('Sharing is not supported in your browser. Copy the link manually: ' + `${window.location.origin}/blog/${slug}`);
     }
   };
 
@@ -83,7 +83,7 @@ export default function SingleBogPage() {
             Read more article
           </Link>
         </div>
-          <button onClick={() => handleShare(post)} className="share--btn">Share</button>
+          <button onClick={() => handleShare(singlePost)} className="share--btn">Share</button>
       </section>
       <Footer />
     </div>
