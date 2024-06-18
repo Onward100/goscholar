@@ -26,7 +26,7 @@ export default function Header() {
           <Link to="/about" className="link" onClick={closeMenu}>
             <li>About</li>
           </Link>
-          <Link to="/services" className="link" onClick={closeMenu}>
+          <Link to="/services/:id" className="link" onClick={closeMenu}>
             <li>Services</li>
           </Link>
           <Link to="/blog" className="link" onClick={closeMenu}>
