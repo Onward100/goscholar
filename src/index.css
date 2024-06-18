@@ -534,7 +534,7 @@ h4 {
   margin: 10% auto;
 }
 .singlePost section h4 {
-  padding-top: 100px;
+  padding-top: 80px !important;
 }
 .singlePost section h2 {
   font-weight: 700px;
