@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import {servicesDetails} from "./servicesData";
+import { servicesDetails } from "./servicesData";
 import { Link } from "react-router-dom";
 
 const ServicesDetails = () => {
@@ -8,8 +8,6 @@ const ServicesDetails = () => {
   const service = servicesDetails.find(
     (service) => service.id === parseInt(id, 10)
   );
-  console.log( id);
-console.log( service);
 
   if (!service) {
     return <div>Service not found</div>;
