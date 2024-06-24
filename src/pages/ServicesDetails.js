@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { servicesDetails } from "./servicesData";
+import servicesDetails  from "./servicesData";
 import { Link } from "react-router-dom";
 
 const ServicesDetails = () => {

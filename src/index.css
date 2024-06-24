@@ -6,6 +6,9 @@
 html {
   scroll-behavior: smooth;
 }
+ul{
+  list-style-type: none;
+}
 /* Add margin to the top of All pages */
 .all--pages {
   margin-top: 80px;
@@ -103,6 +106,12 @@ html {
 }
 .nav-links .link {
   text-decoration: none;
+}
+.dropDown{
+  cursor: pointer;
+}
+.dropDown-menu li{
+  line-height: 50px;
 }
 
 /* LandingPage styling */
@@ -671,7 +680,7 @@ h4 {
 }
 /* Footer styling */
 .footer {
-  background-color: #0f7681;
+  background-color: #07353A;
   color: white;
   padding: 20px;
   margin-top: 30px;
@@ -747,6 +756,13 @@ h4 {
   }
   .logo .menu {
     display: none;
+  }
+  .dropDown-menu{
+    position: absolute;
+    top: 50px;
+    right: 220px;
+    background-color: white;
+  padding: 20px;
   }
   /* Landing Page Styling */
   .image {

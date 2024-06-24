@@ -1,53 +1,3 @@
-const services = [
-  {
-    id: 1,
-    name: "Web Development",
-    image:
-      "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
-  },
-  {
-    id: 2,
-    name: "Web Development",
-    image:
-      "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
-  },
-  {
-    id: 3,
-    name: "Web Development",
-    image:
-      "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
-  },
-  {
-    id: 4,
-    name: "Web Development",
-    image:
-      "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
-  },
-  {
-    id: 5,
-    name: "Web Development",
-    image:
-      "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
-  },
-  {
-    id: 6,
-    name: "Web Development",
-    image:
-      "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
-  },
-  {
-    id: 7,
-    name: "Web Development",
-    image:
-      "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
-  },
-  {
-    id: 8,
-    name: "Web Development",
-    image:
-      "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg",
-  },
-];
 
 const servicesDetails = [
   {
@@ -108,5 +58,4 @@ description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit a
   },
 ];
 
-export default services;
-export { servicesDetails };
+export default servicesDetails;
