@@ -60,7 +60,7 @@ export default function Blog() {
                   Read more
                 </Link>
               </div>
-              <p onClick={() => handleShare(singlePost)} className="share--btn"><FaShareNodes/> Share</p>
+              <p onClick={() => handleShare(post)} className="share--btn"><FaShareNodes/> Share</p>
             </article>
           ))}
         </div>
