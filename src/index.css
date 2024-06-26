@@ -6,17 +6,17 @@
 html {
   scroll-behavior: smooth;
 }
-ul{
+ul {
   list-style-type: none;
 }
 /* Add margin to the top of All pages */
 .all--pages {
   margin-top: 80px;
 }
-.about-img img{
+.about-img img {
   max-width: 100%;
 }
-.about-img{
+.about-img {
   margin-top: 30px;
 }
 /* Error page */
@@ -36,20 +36,9 @@ ul{
   text-align: center;
   color: #0f7681;
 }
-.share--btn{
-  background-color: #0f7681;
-  color: white;
-  border: none;
-  text-align: center;
-  padding: 8px 30px;
-  outline: none;
-  box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-.share--btn:hover{
-  box-shadow: inset 2px 2px 2px 4px rgba(0, 0, 0, 0.7);
+.share--btn {
+  font-size: 20px;
+  cursor: pointer;
 }
 /* Header styling */
 .header {
@@ -107,11 +96,12 @@ ul{
 .nav-links .link {
   text-decoration: none;
 }
-.dropDown{
+.dropDown {
   cursor: pointer;
 }
-.dropDown-menu li{
+.dropDown-menu li {
   line-height: 50px;
+  position: relative;
 }
 
 /* LandingPage styling */
@@ -180,7 +170,7 @@ h1 {
   outline: none;
   box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 .button:hover {
   background-color: white;
@@ -297,6 +287,13 @@ h1 {
   border-radius: 5px;
   border: none;
 }
+.services-dropdown {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
 .contact2-form-content textarea:focus {
   border: 2px solid #0f7681;
 }
@@ -405,15 +402,19 @@ h1 {
   overflow: hidden;
   margin-bottom: 20px;
 }
-.services img{
+.services img {
   width: 100%;
   object-fit: cover;
   height: 300px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
-.services h1{
+.services h1 {
   margin-bottom: 20px;
+}
+.services--link{
+  text-decoration: none;
+  color: #278d98;
 }
 
 /* About Section */
@@ -543,7 +544,7 @@ h4 {
   margin: 10% auto;
 }
 .singlePost section h4 {
-  padding-top: 80px !important;
+  padding-top: 20px !important;
 }
 .singlePost section h2 {
   font-weight: 700px;
@@ -555,7 +556,6 @@ h4 {
   border-radius: 5px;
   margin-top: 20px;
   object-fit: cover;
-  margin-bottom: 20px;
 }
 
 /* Services page styling */
@@ -563,24 +563,27 @@ h4 {
   max-width: 100%;
   border-radius: 8px;
 }
-.services--page{
+.services--page {
   width: 90%;
   margin: auto;
 }
-.services-page h1{
+.services-page h1 {
   padding: 30px 0 10px;
 }
 .servicesDetails {
   width: 80%;
   margin: auto;
 }
-.servicesDetails{
+.servicesDetails {
   padding: 50px 0;
 }
-.servicesDetails img{
+.servicesDetails img {
   height: 480px !important;
 }
-.servicesDetails h1, p, img, .services--btn{
+.servicesDetails h1,
+p,
+img,
+.services--btn {
   margin-bottom: 20px;
 }
 .services--btn {
@@ -680,7 +683,7 @@ h4 {
 }
 /* Footer styling */
 .footer {
-  background-color: #07353A;
+  background-color: #07353a;
   color: white;
   padding: 20px;
   margin-top: 30px;
@@ -757,12 +760,12 @@ h4 {
   .logo .menu {
     display: none;
   }
-  .dropDown-menu{
+  .dropDown-menu {
     position: absolute;
     top: 50px;
     right: 220px;
     background-color: white;
-  padding: 20px;
+    padding: 20px;
   }
   /* Landing Page Styling */
   .image {
@@ -937,20 +940,21 @@ h4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .services-page h1{
+  .services-page h1 {
     padding: 40px 0 0;
   }
   .services-section-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .servicesDetails{
+  .servicesDetails {
     padding: 50px 0;
   }
-  .servicesDetails h1, img{
+  .servicesDetails h1,
+  img {
     margin-bottom: 20px;
   }
-  .servicesDetails img{
+  .servicesDetails img {
     height: 550px !important;
   }
 }

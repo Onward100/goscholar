@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { client } from "../client";
 import Footer from "./Footer";
+import { FaShareNodes } from "react-icons/fa6";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -56,10 +57,10 @@ export default function Blog() {
               <h4>{post.title}</h4>
               <div className="blog-link">
                 <Link className="blog--links" to={`/blog/${post.slug.current}`}>
-                  Read Full Article
+                  Read more
                 </Link>
               </div>
-              <button onClick={() => handleShare(post)} className="share--btn" >Share</button>
+              <p onClick={() => handleShare(singlePost)} className="share--btn"><FaShareNodes/> Share</p>
             </article>
           ))}
         </div>

@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { client } from "../client";
 import BlockContent from "@sanity/block-content-to-react";
 import Footer from "./Footer";
+import { FaShareNodes } from "react-icons/fa6";
 
 export default function SingleBlogPage() {
   const [singlePost, setSinglePost] = useState(null);
@@ -66,12 +67,12 @@ export default function SingleBlogPage() {
   return (
     <div className="singlePost">
       <section>
-        <h4>{singlePost.title}</h4>
         {singlePost.mainImage && singlePost.mainImage.asset && (
           <img src={singlePost.mainImage.asset.url} alt={singlePost.title} />
         )}
-        <h2>Onward Woruka</h2>
-        <div>
+        <h4>{singlePost.title}</h4>
+        <h3>Onward Woruka</h3>
+        <div className="blog--body">
           <BlockContent
             blocks={singlePost.body}
             projectId="8or71iga"
@@ -83,7 +84,7 @@ export default function SingleBlogPage() {
             Read more article
           </Link>
         </div>
-          <button onClick={() => handleShare(singlePost)} className="share--btn">Share</button>
+          <p onClick={() => handleShare(singlePost)} className="share--btn"><FaShareNodes/> Share</p>
       </section>
       <Footer />
     </div>

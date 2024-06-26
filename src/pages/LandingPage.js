@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { client } from "../client";
 import {
-  FaGraduationCap,
-  FaAccessibleIcon,
-  FaArrowRight,
-  FaLightbulb,
+  FaLightbulb
 } from "react-icons/fa";
 import SliderPage from "../SliderPage";
 import Image from "../why-choose.png";
@@ -13,6 +10,7 @@ import ContactImg from "../goscholar-contact.png";
 import Footer from "./Footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { FaShareNodes } from "react-icons/fa6";
 import Rating from "../pages/Rating";
 import services from "./servicesData";
 
@@ -104,16 +102,20 @@ export default function HomePage() {
 
   const handleShare = (post) => {
     if (navigator.share) {
-      navigator.share({
-        title: post.title,
-        url: `${window.location.origin}/blog/${post.slug.current}`,
-      })
-      .then(() => {
-        console.log('Thanks for sharing!');
-      })
-      .catch(console.error);
+      navigator
+        .share({
+          title: post.title,
+          url: `${window.location.origin}/blog/${post.slug.current}`,
+        })
+        .then(() => {
+          console.log("Thanks for sharing!");
+        })
+        .catch(console.error);
     } else {
-      alert('Sharing is not supported in your browser. Copy the link manually: ' + `${window.location.origin}/blog/${post.slug.current}`);
+      alert(
+        "Sharing is not supported in your browser. Copy the link manually: " +
+          `${window.location.origin}/blog/${post.slug.current}`
+      );
     }
   };
 
@@ -300,7 +302,19 @@ export default function HomePage() {
               className="contact2-input"
             />
             {errors.email && <span className="error-msg">{errors.email}</span>}
-            <br />
+            <br /><br />
+            <select onChange={handleChange} className="services-dropdown">
+              <option value="">Select a Service</option>
+              <option value="voice-over">Voice Over</option>
+              <option value="academic-writing">Academic Writing</option>
+              <option value="editing">Editing</option>
+              <option value="proofreading">Proofreading</option>
+              <option value="translation">Translation</option>
+              <option value="transcription">Transcription</option>
+              <option value="copywriting">Copywriting</option>
+              <option value="content-creation">Content Creation</option>
+            </select>
+            <br /><br />
             <label htmlFor="message">Message</label>
             <br />
             <textarea
@@ -335,11 +349,14 @@ export default function HomePage() {
                     <img src={post.mainImage.asset.url} alt={post.title} />
                     <h4>{post.title}</h4>
                     <div className="blog-link">
-                      <Link className="blog--links" to={`/blog/${post.slug.current}`}>
-                        Read Full Article
+                      <Link
+                        className="blog--links"
+                        to={`/blog/${post.slug.current}`}
+                      >
+                        Read more
                       </Link>
                     </div>
-                    <button onClick={() => handleShare(post)} className="share--btn">Share</button>
+                     <p onClick={() => handleShare(singlePost)} className="share--btn"><FaShareNodes/> Share</p>
                   </article>
                 ))}
             </div>
@@ -349,6 +366,11 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="faq-content">
+        <div className="faq--content">
+          <h2 className="intro--header">FAQ</h2>
         </div>
       </section>
       <Footer />

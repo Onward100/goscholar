@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaArrowDown } from "react-icons/fa";
+import { FaBars, FaTimes} from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const dropDownToggle = () => {
+     setDropDown(!dropDown);
+     console.log('log')
+  }
   const closeMenu = () => setIsOpen(false);
 
   return (
@@ -27,19 +33,19 @@ export default function Header() {
               <li>About</li>
             </Link>
             <div className="dropDown">
-              <li onClick={toggle}>
-                Services <FaArrowDown />
+              <li onClick={dropDownToggle}>
+                Services <FaChevronDown />
               </li>
-              {isOpen && (
+              {dropDown && (
                 <ul className="dropDown-menu">
                   <li onClick={closeMenu}>
-                    <Link>Voice Over</Link>
+                    <Link className="services--link">Voice Over</Link>
                   </li>
                   <li onClick={closeMenu}>
-                    <Link>Academic writing</Link>
+                    <Link className="services--link">Academic writing</Link>
                   </li>
-                  <li onClick={closeMenu}>
-                    <Link>Academic writing</Link>
+                  <li >
+                    <Link className="services--link">Academic writing</Link>
                   </li>
                 </ul>
               )}

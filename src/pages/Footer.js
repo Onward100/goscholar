@@ -57,10 +57,6 @@ export default function Footer() {
             </div>
           </div>
           <div className="social">
-          <p>
-            © 2024 Goscholar | The leading education support network. All rights
-            reserved.
-          </p>
           <ul>
             <li>
               <Link to="/"className= 'social-link' >
@@ -83,6 +79,10 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
+          <p>
+            © 2024 Goscholar | The leading education support network. All rights
+            reserved.
+          </p>
           </div>
         </div>
       </footer>
