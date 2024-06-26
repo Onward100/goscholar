@@ -12,16 +12,17 @@ export default function Blog() {
       .fetch(
         `
         *[_type == "post"]{
+          _id, // Ensure _id is included here
           title,
-            slug,
-                  body,
-                  mainImage {
-                    asset -> {
-                      _id,
-                      url
-                    },
-                    alt
-            }
+          slug,
+          body,
+          mainImage {
+            asset -> {
+              _id,
+              url
+            },
+            alt
+          }
         }
         `
       )
@@ -60,7 +61,7 @@ export default function Blog() {
                   Read more
                 </Link>
               </div>
-              <p onClick={() => handleShare(post)} className="share--btn"><FaShareNodes/> Share</p>
+              <p onClick={() => handleShare(post)} className="share--btn"><FaShareNodes /> Share</p>
             </article>
           ))}
         </div>
