@@ -101,7 +101,6 @@ ul {
 }
 .dropDown-menu li {
   line-height: 50px;
-  position: relative;
 }
 
 /* LandingPage styling */
@@ -316,7 +315,7 @@ h1 {
 
 /* Form Page */
 .modal--overlay {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   z-index: 5;
   height: 100vh;
@@ -324,6 +323,20 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
+}
+.modal--content{
+  width: 80%;
+  text-align: center;
+  margin: 60% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+.modal--content img{
+  width: 40%;
 }
 .formPage {
   background-color: #187c87;
@@ -499,10 +512,11 @@ p button {
   width: 90%;
   margin: 3% auto;
 }
-.blog--page h1 {
-  padding-top: 30px;
-  padding-left: 30px;
-  color: #0f7681;
+.blog--image{
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  height: 80vh;
 }
 .blog--page img {
   max-width: 100%;
@@ -956,5 +970,13 @@ img,
   }
   .servicesDetails img {
     height: 550px !important;
+  }
+  /* Get started */
+  .modal--content{
+    margin: 20% auto;
+    width: 50%;
+  }
+  .modal--content img{
+    width: 20%;
   }
 }

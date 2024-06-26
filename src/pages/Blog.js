@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { client } from "../client";
 import Footer from "./Footer";
 import { FaShareNodes } from "react-icons/fa6";
+import blogImage from '../blog.svg'
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -50,7 +51,7 @@ export default function Blog() {
   return (
     <div>
       <div className="blog--page all--pages">
-        <h1>Our Blog</h1>
+        <img src={blogImage} alt="blog--image" className="blog--image"/>
         <div className="blog--contents">
           {posts.map((post) => (
             <article key={post._id}>

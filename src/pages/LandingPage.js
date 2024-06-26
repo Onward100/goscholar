@@ -309,10 +309,10 @@ export default function HomePage() {
               <option value="academic-writing">Academic Writing</option>
               <option value="editing">Editing</option>
               <option value="proofreading">Proofreading</option>
-              <option value="translation">Translation</option>
-              <option value="transcription">Transcription</option>
+              <option value="translation">Term Paper</option>
+              <option value="transcription">Project management</option>
               <option value="copywriting">Copywriting</option>
-              <option value="content-creation">Content Creation</option>
+              <option value="content-creation">Thesis</option>
             </select>
             <br /><br />
             <label htmlFor="message">Message</label>
@@ -368,11 +368,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       <section className="faq-content">
         <div className="faq--content">
           <h2 className="intro--header">FAQ</h2>
+          <div className="faq--section">
+            
+          </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );
