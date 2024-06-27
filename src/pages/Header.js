@@ -20,7 +20,7 @@ export default function Header() {
       <div className="fixed-header">
         <div className="header-content">
           <div className="logo">
-            <img src={logo} alt="GoScholar" className="goscholar--logo" />
+           <Link to='/'> <img src={logo} alt="GoScholar" className="goscholar--logo" /></Link>
             {isOpen ? (
               <FaTimes onClick={toggle} className="menu" />
             ) : (
