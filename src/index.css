@@ -83,6 +83,10 @@ ul {
 }
 .goscholar--logo{
   width: 100px;
+  height: 40px;
+  position: relative;
+  top: 10px;
+  cursor: pointer;
 }
 .logo .menu {
   font-size: 24px;
