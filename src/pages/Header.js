@@ -80,10 +80,10 @@ export default function Header() {
               {show && (
                 <ul className="getStarted-menu">
                   <li onClick={closeMenu}>
-                    <Link to='/getstarted' className="services--link">For Academic</Link>
+                    <Link to='/getstarted' className="services--link">For Academic Services</Link>
                   </li>
                   <li onClick={closeMenu}>
-                    <Link className="services--link">For Business</Link>
+                    <Link className="services--link">For Business Services</Link>
                   </li>
                 </ul>
               )}
