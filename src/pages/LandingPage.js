@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { client } from "../client";
 import {
-  FaLightbulb
+  FaChevronLeft,
+  FaChevronRight,
+  FaChevronUp,
+  FaLightbulb,
 } from "react-icons/fa";
 import SliderPage from "../SliderPage";
 import Image from "../why-choose.png";
@@ -11,7 +14,6 @@ import Footer from "./Footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FaShareNodes } from "react-icons/fa6";
-import Rating from "../pages/Rating";
 import services from "./servicesData";
 import { FaChevronDown } from "react-icons/fa6";
 
@@ -25,7 +27,17 @@ export default function HomePage() {
   const [posts, setPosts] = useState([]);
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(!show);
+  const [openIndex, setOpenIndex] = useState(null);
+  const showIndex = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   const closeMenu = () => setShow(false);
+  const faqs = [
+    { question: "What are our services?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit similique consectetur?" },
+    { question: "What are our services?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit similique consectetur?" },
+    { question: "What are our services?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit similique consectetur?" },
+    { question: "What are our services?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia impedit similique consectetur?" },
+  ];
 
   useEffect(() => {
     client
@@ -146,7 +158,9 @@ export default function HomePage() {
               {show && (
                 <ul className="getStarted-menu">
                   <li onClick={closeMenu}>
-                    <Link to='/getstarted' className="services--link">For Academic</Link>
+                    <Link to="/getstarted" className="services--link">
+                      For Academic
+                    </Link>
                   </li>
                   <li onClick={closeMenu}>
                     <Link className="services--link">For Business</Link>
@@ -172,9 +186,22 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-
-      <Rating />
-
+      <section className="rating--content">
+        <div className="rating">
+          <div className="business">
+            <h4>50+</h4>
+            <p>Businesses</p>
+          </div>
+          <div className="education">
+            <h4>10+</h4>
+            <p>Educational Writings</p>
+          </div>
+          <div className="experience">
+            <h4>2+</h4>
+            <p>Years of Experience</p>
+          </div>
+        </div>
+      </section>
       <div className="why-choose-us">
         <h2 className="intro--header">Why Choose Us</h2>
         <div className="why-choose-content">
@@ -312,7 +339,8 @@ export default function HomePage() {
               className="contact2-input"
             />
             {errors.email && <span className="error-msg">{errors.email}</span>}
-            <br /><br />
+            <br />
+            <br />
             <select onChange={handleChange} className="services-dropdown">
               <option value="">Select a Service</option>
               <option value="academic-writing">Academic Writing</option>
@@ -324,7 +352,8 @@ export default function HomePage() {
               <option value="copywriting">Branding & Design</option>
               <option value="content-creation">Thesis</option>
             </select>
-            <br /><br />
+            <br />
+            <br />
             <label htmlFor="message">Message</label>
             <br />
             <textarea
@@ -366,7 +395,9 @@ export default function HomePage() {
                         Read more
                       </Link>
                     </div>
-                     <p onClick={() => handleShare(post)} className="share--btn"><FaShareNodes/> Share</p>
+                    <p onClick={() => handleShare(post)} className="share--btn">
+                      <FaShareNodes /> Share
+                    </p>
                   </article>
                 ))}
             </div>
@@ -379,12 +410,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="faq-content">
-        <div className="faq--content">
+      <section className="faq-container">
+        <div className="faq--section">
           <h2 className="intro--header">FAQ</h2>
-          <div className="faq--section">
-
+          <p>Frequently Asked Questions</p>
+          <div className="faq--content">
+      {faqs.map((faq, index) => (
+        <div className="faq" key={index}>
+          <div className="faq-question" onClick={() => showIndex(index)}>
+            <p>{faq.question}</p>
+            {openIndex === index ? <FaChevronDown /> : <FaChevronRight />}
           </div>
+          {openIndex === index && (
+            <div className="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
         </div>
       </section>
 

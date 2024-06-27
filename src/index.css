@@ -195,12 +195,15 @@ h1 {
 .rating--content {
   margin: 30px 0 60px;
   text-align: center;
-  background-color: #2ba0ad;
+  background-color: #E7F1F2;
   padding: 50px;
 }
-.rating--content h3 {
-  color: #0a3c42;
-  font-weight: bold;
+.rating{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.rating h4{
+  color: #187c87;
 }
 
 /* Why choose us */
@@ -638,6 +641,25 @@ img,
   height: 80vh;
   object-fit: cover;
 }
+/* FAQ */
+.faq{
+  width: 90%;
+  margin: 0 auto 20px;
+}
+.faq--section p{
+  text-align: center;
+  font-weight: bold;
+}
+.faq-question{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 0;
+  background-color: #07353a;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  gap: 20px;
+}
 /* Contact Page Styling */
 .contact-content {
   width: 90%;
@@ -838,11 +860,12 @@ img,
   .service {
     height: 355px;
   }
-  .rating--content {
+  .rating{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 30px;
-    text-align: center;
+    width: 80%;
+    margin: auto;
   }
   /* Why Choose Us */
   .why-choose--info {
