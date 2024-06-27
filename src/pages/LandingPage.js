@@ -349,7 +349,7 @@ export default function HomePage() {
               <option value="proofreading">Proofreading</option>
               <option value="translation">Business proposal writing</option>
               <option value="transcription">Advert and promotions</option>
-              <option value="copywriting">Branding & Design</option>
+              <option value="copywriting">Advert and promotions</option>
               <option value="content-creation">Thesis</option>
             </select>
             <br />
