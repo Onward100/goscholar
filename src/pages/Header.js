@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes} from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
+import logo from '../goscholar-logo.png'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Header() {
       <div className="fixed-header">
         <div className="header-content">
           <div className="logo">
-            <h2>GoScholar</h2>
+            <img src={logo} alt="GoScholar" className="goscholar--logo" />
             {isOpen ? (
               <FaTimes onClick={toggle} className="menu" />
             ) : (

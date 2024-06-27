@@ -81,6 +81,9 @@ ul {
   font-weight: bold;
   align-items: center;
 }
+.goscholar--logo{
+  width: 100px;
+}
 .logo .menu {
   font-size: 24px;
 }
