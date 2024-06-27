@@ -6,10 +6,11 @@ import { FaChevronDown } from "react-icons/fa";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  const [show, setShow] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const handleShow = () => setShow(!show);
   const dropDownToggle = () => {
      setDropDown(!dropDown);
-     console.log('log')
   }
   const closeMenu = () => setIsOpen(false);
 
@@ -56,9 +57,21 @@ export default function Header() {
             <Link to="/contact" className="link" onClick={closeMenu}>
               <li>Contact</li>
             </Link>
-            <Link to="/getstarted" className="link" onClick={closeMenu}>
-              <li>Get Started</li>
-            </Link>
+            <div className="getStarted--dropdown">
+              <button onClick={handleShow} className="getStarted--btn">
+                Get Started <FaChevronDown />
+              </button>
+              {show && (
+                <ul className="getStarted-menu">
+                  <li onClick={closeMenu}>
+                    <Link to='/getstarted' className="services--link">For Academic</Link>
+                  </li>
+                  <li onClick={closeMenu}>
+                    <Link className="services--link">For Business</Link>
+                  </li>
+                </ul>
+              )}
+            </div>
           </ul>
         </div>
       </div>

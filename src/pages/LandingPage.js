@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import { FaShareNodes } from "react-icons/fa6";
 import Rating from "../pages/Rating";
 import services from "./servicesData";
+import { FaChevronDown } from "react-icons/fa6";
 
 export default function HomePage() {
   useEffect(() => {
@@ -22,6 +23,9 @@ export default function HomePage() {
   //Blog
 
   const [posts, setPosts] = useState([]);
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(!show);
+  const closeMenu = () => setShow(false);
 
   useEffect(() => {
     client
@@ -135,15 +139,21 @@ export default function HomePage() {
               proposals, captivating ads, professional voice overs, and standout
               branding websites.
             </p>
-            <Link to="/about" className="learMore">
-              <button
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                className="button"
-              >
-                Get started
+            <div className="getStarted--dropdown">
+              <button onClick={handleShow} className="getStarted--btn">
+                Get Started <FaChevronDown />
               </button>
-            </Link>
+              {show && (
+                <ul className="getStarted-menu">
+                  <li onClick={closeMenu}>
+                    <Link to='/getstarted' className="services--link">For Academic</Link>
+                  </li>
+                  <li onClick={closeMenu}>
+                    <Link className="services--link">For Business</Link>
+                  </li>
+                </ul>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -373,7 +383,7 @@ export default function HomePage() {
         <div className="faq--content">
           <h2 className="intro--header">FAQ</h2>
           <div className="faq--section">
-            
+
           </div>
         </div>
       </section>
