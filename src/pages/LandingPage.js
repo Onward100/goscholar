@@ -315,13 +315,13 @@ export default function HomePage() {
             <br /><br />
             <select onChange={handleChange} className="services-dropdown">
               <option value="">Select a Service</option>
-              <option value="voice-over">Voice Over</option>
               <option value="academic-writing">Academic Writing</option>
-              <option value="editing">Editing</option>
+              <option value="voice-over">Voice Over</option>
+              <option value="editing">SOP & Research proposals</option>
               <option value="proofreading">Proofreading</option>
-              <option value="translation">Term Paper</option>
-              <option value="transcription">Project management</option>
-              <option value="copywriting">Copywriting</option>
+              <option value="translation">Business proposal writing</option>
+              <option value="transcription">Advert and promotions</option>
+              <option value="copywriting">Branding & Design</option>
               <option value="content-creation">Thesis</option>
             </select>
             <br /><br />

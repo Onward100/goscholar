@@ -40,13 +40,28 @@ export default function Header() {
               {dropDown && (
                 <ul className="dropDown-menu">
                   <li onClick={closeMenu}>
-                    <Link className="services--link">Voice Over</Link>
+                    <Link className="services--link">Academic writing</Link>
                   </li>
                   <li onClick={closeMenu}>
-                    <Link className="services--link">Academic writing</Link>
+                    <Link className="services--link">SOP & Research proposals</Link>
                   </li>
                   <li >
-                    <Link className="services--link">Academic writing</Link>
+                    <Link className="services--link">Business proposal writing</Link>
+                  </li>
+                  <li >
+                    <Link className="services--link">Branding & Design</Link>
+                  </li>
+                  <li >
+                    <Link className="services--link">Proofreading</Link>
+                  </li>
+                  <li >
+                    <Link className="services--link">Advert and promotions</Link>
+                  </li>
+                  <li >
+                    <Link className="services--link">Thesis</Link>
+                  </li>
+                  <li >
+                    <Link className="services--link">Term Paper</Link>
                   </li>
                 </ul>
               )}
