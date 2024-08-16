@@ -156,14 +156,14 @@ export default function HomePage() {
                 Get Started <FaChevronDown />
               </button>
               {show && (
-                <ul className="getStarted-menu">
+                <ul className="getStarted-menu getStarted-home">
                   <li onClick={closeMenu}>
                     <Link to="/getstarted" className="services--link">
-                      For Academic
+                      For Academic services
                     </Link>
                   </li>
                   <li onClick={closeMenu}>
-                    <Link className="services--link">For Business</Link>
+                    <Link className="services--link">For Business services</Link>
                   </li>
                 </ul>
               )}

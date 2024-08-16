@@ -46,22 +46,22 @@ export default function Header() {
                   <li onClick={closeMenu}>
                     <Link className="services--link">SOP & Research proposals</Link>
                   </li>
-                  <li >
+                  <li  onClick={closeMenu}>
                     <Link className="services--link">Business proposal writing</Link>
                   </li>
-                  <li >
+                  <li  onClick={closeMenu}>
                     <Link className="services--link">Branding & Design</Link>
                   </li>
-                  <li >
+                  <li onClick={closeMenu} >
                     <Link className="services--link">Proofreading</Link>
                   </li>
-                  <li >
+                  <li  onClick={closeMenu}>
                     <Link className="services--link">Advert and promotions</Link>
                   </li>
-                  <li >
+                  <li  onClick={closeMenu}>
                     <Link className="services--link">Thesis</Link>
                   </li>
-                  <li >
+                  <li  onClick={closeMenu}>
                     <Link className="services--link">Term Paper</Link>
                   </li>
                 </ul>

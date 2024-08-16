@@ -101,7 +101,7 @@ ul {
   left: 0;
   transition: all 0.3s ease;
   transform: translateX(-100%);
-  z-index: 5;
+  z-index: 777;
   height: 100vh;
 }
 .open {
@@ -124,7 +124,7 @@ ul {
   cursor: pointer;
 }
 .dropDown-menu li {
-  line-height: 20px;
+  margin-bottom: 10px;
 }
 
 /* LandingPage styling */
@@ -451,6 +451,8 @@ h1 {
 }
 .services h1 {
   margin-bottom: 20px;
+  font-size: 25px;
+  width: 60%;
 }
 .services--link{
   text-decoration: none;
@@ -465,9 +467,12 @@ h1 {
   position: absolute;
   bottom: 0;
   padding: 100px 20px;
-  font-size: 50px;
+  font-size: 30px;
   color: white;
   font-weight: bold;
+}
+.image2{
+  height: 80vh;
 }
 .about--content {
   width: 90%;
@@ -542,8 +547,8 @@ p button {
 .blog--image{
   width: 100%;
   object-fit: cover;
-  object-position: top;
-  height: 80vh;
+  object-position: bottom;
+  height: 80vh !important;
 }
 .blog--page img {
   max-width: 100%;
@@ -650,7 +655,7 @@ img,
 }
 /* FAQ */
 .faq{
-  width: 90%;
+  width: 60%;
   margin: 0 auto 20px;
 }
 .faq--section p{
@@ -766,10 +771,17 @@ img,
   justify-content: center;
   gap: 20px;
   text-align: center;
+  align-items: baseline;
 }
 .social li {
   list-style-type: none;
-  font-size: 24px;
+  font-size: 20px;
+  background-color: white;
+  width: 40px;
+  padding: 4px;
+}
+.social .social-link{
+  color: #0f7681;
 }
 .social-link {
   color: white;
@@ -779,6 +791,42 @@ img,
 .social-link:hover {
   color: #c12f32;
   text-decoration: underline;
+}
+
+  .info-social-icon{
+  text-align: center;
+  background-color: #0f7681;
+  padding: 6px;
+  width: 40px;
+  margin-bottom: 10px;
+}
+.information-icon{
+  color: white;
+  font-size: 20px;
+}
+
+.footer-newsletter-input{
+  margin-bottom: 20px;
+}
+.footer-newsletter p{
+  width: 80%;
+}
+.footer-newsletter-input input{
+  border: none;
+  outline: none;
+  padding: 5px;
+  background-color: #3D3D3D;
+  caret-color: white;
+  color: white;
+}
+.footer-newsletter-input button{
+  border: none;
+  background-color: #0f7681;
+  padding: 5px;
+}
+.footer-newsletter-input .newsletter-icon{
+  color: white;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 640px) {
@@ -803,6 +851,12 @@ img,
     justify-content: space-between;
     align-items: center;
   }
+  .getStarted-home{
+    position: absolute;
+    left: 750px;
+    border-radius: 5px;
+    width: 15%;
+  }
   .nav-links {
     display: flex;
     align-items: center;
@@ -823,7 +877,7 @@ img,
   }
   .dropDown-menu {
     position: absolute;
-    top: 50px;
+    top: 70px;
     right: 220px;
     background-color: white;
     padding: 20px;
@@ -899,6 +953,9 @@ img,
     gap: 30px;
     margin-bottom: 20px;
   }
+  .bg-about h1{
+    font-size: 50px !important;
+  }
   .vision {
     flex-direction: row-reverse;
   }
@@ -943,11 +1000,17 @@ img,
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  .blog--contents article{
+    height: auto;
+  }
   .blog--page h1 {
     padding-left: 80px;
   }
+  .blog--image{
+    height: 100vh !important;
+  }
   .blog--contents img {
-    height: 600px;
+    height: 400px;
     object-fit: cover;
   }
   .singlePost section img {
@@ -962,7 +1025,7 @@ img,
     padding-top: 130px;
   }
   .image2 {
-    height: 80vh;
+    height: 100vh;
   }
   .bg-about h1 {
     padding: 180px 30px;
@@ -974,7 +1037,7 @@ img,
     width: 25%;
   }
   .image-overlay {
-    height: 80vh;
+    height: 100vh;
   }
   .image-overlay-content {
     width: 70%;
@@ -1002,6 +1065,25 @@ img,
     flex-direction: row;
     gap: 50px;
     margin: 30px 60px;
+  }
+  .footer-newsletter{
+    margin-left: 80px;
+  }
+  .information{
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin: 50px auto 0;
+}
+.our-services-links{
+  display: flex;
+  gap: 30px;
+}
+.information-info{
+  text-align: center;
+  }
+  .info-social-icon{
+    margin: auto;
   }
 
   /* Services Page Styling */

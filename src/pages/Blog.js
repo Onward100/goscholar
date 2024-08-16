@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { client } from "../client";
 import Footer from "./Footer";
 import { FaShareNodes } from "react-icons/fa6";
-import blogImage from '../blog.svg'
+import BlockContent from "@sanity/block-content-to-react";
+import blogImage from "../blog.svg";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -35,34 +36,47 @@ export default function Blog() {
 
   const handleShare = (post) => {
     if (navigator.share) {
-      navigator.share({
-        title: post.title,
-        url: `${window.location.origin}/blog/${post.slug.current}`,
-      })
-      .then(() => {
-        console.log('Thanks for sharing!');
-      })
-      .catch(console.error);
+      navigator
+        .share({
+          title: post.title,
+          url: `${window.location.origin}/blog/${post.slug.current}`,
+        })
+        .then(() => {
+          console.log("Thanks for sharing!");
+        })
+        .catch(console.error);
     } else {
-      alert('Sharing is not supported in your browser. Copy the link manually: ' + `${window.location.origin}/blog/${post.slug.current}`);
+      alert(
+        "Sharing is not supported in your browser. Copy the link manually: " +
+          `${window.location.origin}/blog/${post.slug.current}`
+      );
     }
   };
 
   return (
     <div>
       <div className="blog--page all--pages">
-        <img src={blogImage} alt="blog--image" className="blog--image"/>
+        <img src={blogImage} alt="blog--image" className="blog--image" />
         <div className="blog--contents">
           {posts.map((post) => (
             <article key={post._id}>
               <img src={post.mainImage.asset.url} alt={post.title} />
               <h4>{post.title}</h4>
+              <div className="blog--body">
+                <BlockContent
+                  blocks={post.body}
+                  projectId="8or71iga"
+                  dataset="production"
+                />
+              </div>
               <div className="blog-link">
                 <Link className="blog--links" to={`/blog/${post.slug.current}`}>
                   Read more
                 </Link>
               </div>
-              <p onClick={() => handleShare(post)} className="share--btn"><FaShareNodes /> Share</p>
+              <p onClick={() => handleShare(post)} className="share--btn">
+                <FaShareNodes /> Share
+              </p>
             </article>
           ))}
         </div>
